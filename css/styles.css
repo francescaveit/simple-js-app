@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto+Slab:300,400,700');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --content-position-top: 100px;
+  --content-position-bottom: 100px;
+
+  /* Color */
+  --primary-color: #00f;
+  --secondary-color: #f9b7ff;
+  --dark-grey: #2b2b2b;
+  --error-color: #d9534f;
+
+  /* Font */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-size-middle: 20px;
+  --font-line-height: 1.4;
+  --font-family-header: 'Abril Fatface', serif;
+  --font-family-content: 'Roboto Slab', serif;
+}
+
+body {
+  margin: 10px;
+  padding: 10px;
+  font-family: var(--font-family-content);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-middle);
+  line-height: var(--font-line-height);
+
+  /* animation: 30s colorchange infinite alternate linear; */
+  background: linear-gradient(to right, #fff4b7 0%, #edffb7 19%, #b7fffc 40%, #e7cafc 60%, #fccae0 83%, #fff4b7 100%);
+  background-size: 3000px 100%;
+}
+
+h1 {
+  font-family: var(--font-family-header);
+  line-height: 1;
+  font-weight: var(--font-weight-regular);
+  font-size: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: var(--font-family-header);
+  font-size: 30px;
+  line-height: 1;
+  font-weight: var(--font-weight-regular);
+  margin: 0;
+}
+
+h3 {
+  font-size: var(--font-size-middle);
+  font-weight: var(--font-weight-bold);
+  margin: 10px 0;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  /* text-decoration: underline; */
+  color: white;
+  text-decoration: underline;
+  transition: all 0.2s ease-in;
+}
+
+a:visited {
+  color: var(--primary-color);
+}
+
+a:active {
+  color: white;
+  text-decoration: underline;
+}
+
+.p__small {
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.top_article {
+  box-sizing: border-box;
+  width: fit-content;
+  font-size: 14px;
+  
+  background-color: var(--secondary-color);
+  margin-right: 20px;
+  padding: 4px;
+}
