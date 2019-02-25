@@ -5,20 +5,17 @@
 //];
 
 var repository = [
-  ['OMR19 steht in den Startlöchern',
+  ['Bullbasur',
+  0.7,
+  ['Grass', 'Poison']],
+
+  ['Charizard',
+  1.7,
+  ['Fire', 'Flying']],
+
+  ['Ekans',
   2,
-  ['Webdesign', 'UX', 'UI'],
-  'Nach der OMR ist vor der OMR! Jedes Jahr kommen in den Hamburger Messehallen über 40.000 Marketing-Fachleute und Tech-Experten zum OMR-Festival zusammen, Tendenz steigend. Für viele Aussteller und Branchenexperten ist dieses Event ein echtes Jahreshighlight. Kein Wunder: Neben 300 Top-Speakern wie Gary Vaynerchuk oder Casey Neistat kann man sich für über ...'],
-
-  ['alike – Die neue visuelle Suchmaschine von OTTO',
-  1,
-  ['Appdesign', 'UX', 'UI', 'Corporate Design'],
-  'Wer kennt das nicht: Unterwegs sieht man ein schönes Sofa oder eine tolle Lampe, die man auch gerne hätte, doch man weiß nicht, nach welchem Begriff man googlen soll. Für diese Situation hat das Unternehmen OTTO nun die App alike auf den Markt gebracht. Das Prinzip ist ganz...'],
-
-  ['Finance Forward – Online Tech-News für die Macher von morgen',
-  1,
-  ['Webdesign', 'UX', 'UI', 'Corporate Design'],
-  'Im Online-Marketing-Universum unseres Kunden OMR gibt es einen neuen Stern: Finance Forward, eine News-Seite für Fachartikel aus den Bereichen Fintech, Payment und Modern Marketing. Damit ergänzt OMR seine Service-Palette um einen weiteren Baustein. Die Konzeption und das Design für Finance Forward stammt von No agency. Unser Ziel: Ein...'],
+  ['Poison']],
 ]
 
 
@@ -26,28 +23,25 @@ console.log (repository[1][0]);
 
 
 for (var i = 0; i < repository.length; i++) {
-  if (repository[i][1] == 2) {
-    document.write ('<p class="top_article">Top Article</p>');
+  if (repository[i][1] > 1.9) {
+    document.write ('<p class="top_article">Wow - he is biggest Pokemon</p>');
   }
 
   document.write ('<H2><a href="">' + repository[i][0] + '</a></H2>');
 
-  document.write ('<p class="p__small">Tags: ');
+  document.write ('<p class="p__small">Types: ');
   for (var j = 0; j < repository[i][2].length; j++) {
-    if (repository[i][2][j] == 'Webdesign') {
-      document.write (' <span class="p__small" style="color:#fccae0;">' + repository[i][2][j] + ',');
+    if (repository[i][2][j] == 'Grass') {
+      document.write (' <span class="p__small" style="color:rgb(186, 227, 166);">' + repository[i][2][j] + ',');
     }
-    else if (repository[i][2][j] == 'UX') {
-      document.write (' <span class="p__small" style="color:#e7cafc;">' + repository[i][2][j] + ',');
+    else if (repository[i][2][j] == 'Poison') {
+      document.write (' <span class="p__small" style="color:rgb(106, 42, 106);">' + repository[i][2][j] + ',');
     }
-    else if (repository[i][2][j] == 'UI') {
-      document.write (' <span class="p__small" style="color:#b7fffc;">' + repository[i][2][j] + ',');
+    else if (repository[i][2][j] == 'Fire') {
+      document.write (' <span class="p__small" style="color:rgb(247, 191, 151);">' + repository[i][2][j] + ',');
     }
-    else if (repository[i][2][j] == 'Appdesign') {
-      document.write (' <span class="p__small" style="color:#edffb7;">' + repository[i][2][j] + ',');
-    }
-    else if (repository[i][2][j] == 'Corporate Design') {
-      document.write (' <span class="p__small" style="color:#e7cafc;">' + repository[i][2][j] + ',');
+    else if (repository[i][2][j] == 'Flying') {
+      document.write (' <span class="p__small" style="color:rgb(142, 111, 235);">' + repository[i][2][j] + ',');
     }
 
   }
