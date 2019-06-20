@@ -99,7 +99,6 @@ a:active {
   box-sizing: border-box;
   width: fit-content;
   font-size: 14px;
-  
   background-color: var(--secondary-color);
   margin-right: 20px;
   padding: 4px;
