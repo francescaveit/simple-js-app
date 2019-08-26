@@ -42,7 +42,11 @@ var name = 'Pikachu';
 //document.write ("3 " + pokemonRepository.getAll() + '<BR>');
 
 console.log('1: ' + pokemonRepository.getAll()); // []
+<<<<<<< HEAD
 pokemonRepository.add({ name: 'Pikachu' });
+=======
+//pokemonRepository.add({ name: 'Pikachu' });
+>>>>>>> master
 console.log('2: ' + pokemonRepository.getAll()); // [ { name: 'Pikachu' } ]
 
 
