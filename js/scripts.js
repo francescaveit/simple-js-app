@@ -3,17 +3,18 @@
 
 var pokemonRepository = (function (){
   var repository = [
-    ['Bullbasur',
-    0.7,
-    ['Grass', 'Poison']],
+    {
+      name: 'Bullbasur',
+      height: 0.7,
+      types: ['Grass', 'Poison']
+    },
+    {
+      name: 'Charizard',
+      height: 1.7,
+      types: ['Fire', 'Flying']
+    }
 
-    ['Charizard',
-    1.7,
-    ['Fire', 'Flying']],
 
-    ['Ekans',
-    2,
-    ['Poison']],
   ];
 
   function add(pokemon) {
@@ -24,14 +25,13 @@ var pokemonRepository = (function (){
   function getAll() {
     return repository;
     }
+
   return {
     add: add,
     getAll: getAll
   };
 })();
 
-
-var name = 'Pikachu';
 //Initialization forEach
 //repository.forEach(arrLoop);
 
@@ -40,11 +40,17 @@ var name = 'Pikachu';
 //document.write ("1 " + pokemonRepository + '<BR>');
 //document.write ("2 " + pokemonRepository.add() + '<BR>');
 //document.write ("3 " + pokemonRepository.getAll() + '<BR>');
+//console.log('1: ' + pokemonRepository.getAll()); // []
+//pokemonRepository.add({ name: 'Pikachu' });
+//console.log('2: ' + pokemonRepository.getAll()); // [ { name: 'Pikachu' } ]
 
-console.log('1: ' + pokemonRepository.getAll()); // []
-pokemonRepository.add({ name: 'Pikachu' });
-console.log('2: ' + pokemonRepository.getAll()); // [ { name: 'Pikachu' } ]
-
+pokemonRepository.getAll().forEach(element => {
+  console.log ('Show me the Element' + element);
+  console.log (element);
+  document.write(element);
+  //document.write (element);
+  }
+);
 
 /*pokemonRepository.forEach(function('Bullbasur', 0.7, ['Grass', 'Poison']) {
     console.log(einArrayElement
@@ -112,4 +118,4 @@ function arrLoop(currentArr){
 
 
 //pokemonRepository.forEach(repository);
-pokemonRepository.forEach(repository);
+//pokemonRepository.forEach(repository);
