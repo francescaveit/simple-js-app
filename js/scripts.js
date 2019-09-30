@@ -16,44 +16,53 @@ var pokemonRepository = (function (){
       height: 3.5,
       types: ['Gift']
     }
-
-
   ];
+
 
   function add(pokemon) {
     repository.push(pokemon);
-    console.log ('Test2: ' + pokemon);
     };
 
   function getAll() {
     return repository;
-    }
+  };
+
+  //Function to show the Details for the Pokemon
+  function showDetails (pokemon) {
+    console.log(pokemon);
+    return pokemon;
+  }
+
+  //Function for adding a Button
+  function addListItem (pokemon) {
+    var button = document.createElement('button'); //Create a Button
+    button.innerHTML = pokemon.name; //Insert a CallToAction
+    button.classList.add('pokemonbutton'); //Add CSS-Class
+
+    $pokemonlist.lastElementChild.appendChild(button); //Add the Button inside Website
+
+    button.addEventListener ('click', function (event) {
+      showDetails (pokemon); //Call the Function showDetails to show the Detail-Informations
+    });
+    return pokemon;
+  };
+
 
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
 
+
+var $pokemonlist = document.querySelector('.pokemonlist');
+
 //Initialization forEach
 pokemonRepository.getAll().forEach(element => {
-  if (element.height > 1.9) {
-    document.write('<p class="top_article">Wow - he is biggest Pokemon</p>');
-  }
-
-  //Name
-  document.write('<H2><a href="">' + element.name + '</a></H2>');
-
-  //Size
-  document.write ('<p class="p__small">Size: ' + element.height);
-
-  //Type
-  document.write ('<p class="p__small">Type: ');
-  element.types.forEach(arrLoopType);
-
-  //Breaks for the space between the Pokemons
-  document.write ('</p>');
-  document.write ('<BR><BR>');
+  var listItem = document.createElement('li'); //Create a new Li-Element
+  $pokemonlist.appendChild(listItem); //Add the Li-Element inside the Ul-Element
+  pokemonRepository.addListItem(element); //Call the function addListItem to add Button inside the Li
   }
 );
 
@@ -74,4 +83,4 @@ function arrLoopType(currentArr){
   else if (currentArr == 'Gift') {
     document.write (' <span class="p__small" style="color:rgb(255, 0, 0);">' + currentArr + ',');
   }
-}
+};

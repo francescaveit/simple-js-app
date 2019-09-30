@@ -90,6 +90,30 @@ a:active {
   text-decoration: underline;
 }
 
+li {
+  list-style: none;
+}
+
+.pokemonbutton {
+  color: #00f;
+  background-color: inherit;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00f;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.pokemonbutton:focus,
+.pokemonbutton:hover {
+  color: #fff;
+  background-color: #00f;
+}
+
 .p__small {
   font-size: 16px;
   margin-right: 20px;
@@ -102,4 +126,8 @@ a:active {
   background-color: var(--secondary-color);
   margin-right: 20px;
   padding: 4px;
+}
+
+.personal-details {
+  font-size: 20px;
 }
