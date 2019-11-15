@@ -51,7 +51,7 @@ var pokemonRepository = (function (){
     return pokemon;
   };
 
-  /*function loadDetails(item) {
+  function loadDetails(item) {
     var url = item.detailsUrl;
     return fetch(url).then(function (response) {
       return response.json();
@@ -63,7 +63,7 @@ var pokemonRepository = (function (){
     }).catch(function (e) {
       console.error(e);
     });
-  }*/
+  }
 
   function loadList() {
     return fetch(apiUrl).then(function (response) {
